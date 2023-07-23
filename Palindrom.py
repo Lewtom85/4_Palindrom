@@ -3,10 +3,8 @@
 text = ("Kobyla, ma maly bok.")
 
 def palindrom(text):
-    x = text.lower() #zmieniam litery na male w tekscie
-    x = x.replace(" ", "") #usuwam spacje w tekscie
-    x = x.replace(",", "") #usuwam przecinki i ponizej kropki
-    x = x.replace(".", "")
+    x = ''.join(c for c in text if c.isalnum())
+    x = x.lower() #zmieniam litery na male w tekscie
     print(x)
     return x == x[::-1]
 
